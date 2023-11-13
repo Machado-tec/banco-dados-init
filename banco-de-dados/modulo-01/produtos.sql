@@ -1,0 +1,14 @@
+-- Um para Um com Gerente x Departamento
+BEGIN TRANSACTION;
+DROP TABLE IF EXISTS PRODUTOS;
+CREATE TABLE PRODUTOS (
+    id Integer Primary Key, 
+    nome Text, 
+    marcas_id INTEGER,
+    FOREIGN KEY (marcas_id) REFERENCES marcas(id)
+);
+INSERT INTO PRODUTOS VALUES(1,'Teclado',1);
+INSERT INTO PRODUTOS VALUES(2,'Monitor 14"',1);
+INSERT INTO PRODUTOS VALUES(3,'iPhone 7 X',2);
+INSERT INTO PRODUTOS VALUES(4,'iPhone 8 X',2);
+COMMIT;

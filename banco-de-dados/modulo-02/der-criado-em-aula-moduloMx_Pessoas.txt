@@ -1,0 +1,30 @@
+Mx_Pessoas
+-
+pessoas_id int PK 
+pessoas_nome string 
+pessoas_cidade_id int FK >- Mx_Cidades.cidades_id
+# N:1
+
+
+Mx_Cidades
+-
+cidades_id PK int
+cidades_nome string
+cidades_estado string 
+
+
+#1:1
+Mx_Maridos
+- 
+maridos_id int PK
+maridos_nome string 
+maridos_esposa_id int FK - Mx_Esposas.esposas_id
+
+
+Mx_Esposas
+-
+esposas_id ind PK
+esposas_nome string 
+
+### M:N
+

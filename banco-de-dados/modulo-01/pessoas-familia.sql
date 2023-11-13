@@ -1,0 +1,22 @@
+BEGIN TRANSACTION;
+DROP TABLE IF EXISTS PESSOAS;
+CREATE TABLE PESSOAS (
+    id Integer Primary Key, 
+    nome Text, 
+    pai_id INTEGER,
+    mae_id INTEGER,
+    filho_id INTEGER, 
+    amigo_id INTEGER,
+    cidade_id INTEGER,    
+    FOREIGN KEY (pai_id) REFERENCES PESSOAS(id),
+    FOREIGN KEY (filho_id) REFERENCES PESSOAS(id),
+    FOREIGN KEY (mae_id) REFERENCES PESSOAS(id),
+    FOREIGN KEY (amigo_id) REFERENCES PESSOAS(id),
+    FOREIGN KEY (cidade_id) REFERENCES CIDADES(id)
+
+);
+INSERT INTO PESSOAS VALUES(1,'Elvira',0,0,2,0,3);
+INSERT INTO PESSOAS VALUES(2,'Adriano',3,1,0,4,1);
+INSERT INTO PESSOAS VALUES(3,'Carlos',0,0,2,0,3);
+INSERT INTO PESSOAS VALUES(4,'Samir',0,0,0,2,2);
+COMMIT;

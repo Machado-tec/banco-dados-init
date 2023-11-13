@@ -1,0 +1,11 @@
+-- Um para Um com Gerente x Departamento
+BEGIN TRANSACTION;
+DROP TABLE IF EXISTS GERENTES;
+CREATE TABLE GERENTES (
+    id Integer Primary Key, 
+    nome Text
+);
+INSERT INTO GERENTES VALUES(1,'Hans');
+INSERT INTO GERENTES VALUES(2,'Fritz');
+COMMIT;
+

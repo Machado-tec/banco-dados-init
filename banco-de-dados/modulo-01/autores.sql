@@ -1,0 +1,19 @@
+-- Um para Um com Gerente x Departamento
+BEGIN TRANSACTION;
+DROP TABLE IF EXISTS AUTORES;
+CREATE TABLE AUTORES (
+    id Integer Primary Key, 
+    nome Text
+);
+INSERT INTO AUTORES VALUES(1,'Bon Scott');
+INSERT INTO AUTORES VALUES(2,'Angus Young');
+INSERT INTO AUTORES VALUES(3,'Malcom Younb');
+INSERT INTO AUTORES VALUES(4,'Robert Plant');
+INSERT INTO AUTORES VALUES(5,'Jimmy Page');
+INSERT INTO AUTORES VALUES(6,'Phill Collins');
+
+
+
+COMMIT;
+
+

@@ -1,0 +1,70 @@
+
+-- SELECT * FROM PESSOAS; 
+-- SELECT * FROM CIDADES; 
+
+-- SELECT PESSOA_NOME,PESSOA_IDADE 
+-- FROM PESSOAS; 
+
+-- SELECT DISTINCT(PESSOA_NOME)
+-- FROM PESSOAS
+
+
+-- select pessoa_nome,pessoa_cidade_id from pessoas where pessoa_idade <= 18;
+-- SELECT PESSOA_NOME,PESSOA_ID FROM PESSOAS WHERE PESSOA_NOME = "Adriana";
+
+-- SELECT PESSOA_NOME,PESSOA_ID FROM PESSOAS WHERE PESSOA_NOME = "Adriano";
+
+
+-- SELECT * FROM PESSOAS WHERE PESSOA_IDADE IN (14,18);
+
+-- SELECT * FROM PESSOAS WHERE PESSOA_NOME LIKE '%Adrian%';
+
+-- SELECT * FROM PESSOAS WHERE PESSOA_NOME LIKE '%Patri%' AND PESSOA_IDADE = 18;
+
+-- SELECT * FROM PESSOAS WHERE PESSOA_NOME LIKE '%Patri%' or PESSOA_IDADE = 18;
+
+-- SELECT * FROM PESSOAS WHERE PESSOA_IDADE BETWEEN 45 and 50;
+
+-- SELECT PESSOA_IDADE,PESSOA_NOME FROM PESSOAS ORDER BY PESSOA_IDADE; 
+
+-- SELECT PESSOA_IDADE,PESSOA_NOME 
+-- FROM PESSOAS 
+-- ORDER BY PESSOA_IDADE DESC; 
+
+
+-- SELECT PESSOA_IDADE,PESSOA_NOME 
+-- FROM PESSOAS 
+-- ORDER BY PESSOA_IDADE,PESSOA_NOME; 
+
+
+-- select avg(pessoa_idade) from pessoas; 
+
+-- select min(pessoa_idade) from pessoas; 
+
+-- select max(pessoa_idade)  from pessoas;
+
+-- select sum(pessoa_idade)    from pessoas;
+
+-- select count(*) 
+-- from pessoas; 
+
+-- select PESSOA_IDADE, count(pessoa_nome)
+-- from pessoas
+-- group by pessoa_idade; 
+
+
+SELECT 
+    CIDADES.CIDADE_NOME, 
+    PESSOAS.PESSOA_NOME,
+    PESSOAS.PESSOA_IDADE
+FROM    
+    PESSOAS,CIDADES
+WHERE 
+    PESSOAS.PESSOA_CIDADE_ID = CIDADES.CIDADE_ID;
+
+
+
+
+
+
+
