@@ -59,3 +59,4 @@
 - Módulo 06 - Aula 07 - Aplicativos diversos SGDB, Browsers.
 
 
+Jéssica está lendo isso agora, as 07:50 
